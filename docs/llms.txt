@@ -1,0 +1,30 @@
+# GitHub 个人主页装修助手 / GitHub Profile Decorator — 官网内容清单
+
+> Chrome / Edge Manifest V3 浏览器扩展。访问任意 GitHub 个人主页时，在页面底部自动注入统计卡片、贡献蛇、技术栈图标、成就奖杯与社交徽章。零依赖、零构建、无后端、不收集数据。
+
+## 本页内容
+
+- [为什么用它](https://achun1107.github.io/github-profile-decorator/#why)：浏览器侧注入，不用改目标用户的仓库
+- [30 秒安装](https://achun1107.github.io/github-profile-decorator/#install)：clone + 开发者模式加载
+- [12 个模块](https://achun1107.github.io/github-profile-decorator/#modules)：可独立开关的装饰卡片
+- [FAQ](https://achun1107.github.io/github-profile-decorator/#faq)：常见问题与排查
+
+## 完整文档（仓库）
+
+- [README.md](https://github.com/achun1107/github-profile-decorator/blob/main/README.md)：安装、配置、贡献蛇、FAQ、文档索引
+- [AGENTS.md](https://github.com/achun1107/github-profile-decorator/blob/main/AGENTS.md)：AI 协作规范与硬性约束
+- [llms.txt（仓库版）](https://github.com/achun1107/github-profile-decorator/blob/main/llms.txt)：面向 LLM 的完整文件清单
+- [PRIVACY.md](https://github.com/achun1107/github-profile-decorator/blob/main/PRIVACY.md)：隐私政策
+- [SECURITY.md](https://github.com/achun1107/github-profile-decorator/blob/main/SECURITY.md)：漏洞报告渠道
+- [CONTRIBUTING.md](https://github.com/achun1107/github-profile-decorator/blob/main/CONTRIBUTING.md)：贡献指南
+- [CHANGELOG.md](https://github.com/achun1107/github-profile-decorator/blob/main/CHANGELOG.md)：版本变更
+
+## 源码
+
+- [manifest.json](https://github.com/achun1107/github-profile-decorator/blob/main/manifest.json)
+- [content.js](https://github.com/achun1107/github-profile-decorator/blob/main/content.js)：注入逻辑（核心）
+- [popup.html](https://github.com/achun1107/github-profile-decorator/blob/main/popup.html) / [popup.js](https://github.com/achun1107/github-profile-decorator/blob/main/popup.js)
+
+## 状态
+
+当前尚未上架 Chrome Web Store，安装方式为 clone + 开发者模式「加载已解压的扩展程序」。

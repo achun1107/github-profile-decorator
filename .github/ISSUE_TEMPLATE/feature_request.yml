@@ -1,0 +1,39 @@
+name: ✨ 功能建议
+description: 新增装饰模块、配置能力或体验改进
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提建议前请先看 [README 模块表](https://github.com/achun1107/github-profile-decorator/blob/main/README.md)，确认不是已有能力。
+        注意：本项目**保持零依赖、零构建、仅 `https://github.com/*` 权限**，需要扩大权限或引入打包流程的建议会被婉拒，理由见 `AGENTS.md`。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决什么问题
+      description: 说场景，不要只说想要某个按钮
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议怎么做
+    validations:
+      required: true
+
+  - type: input
+    id: data_source
+    attributes:
+      label: 如涉及第三方卡片服务，请给出服务名与 URL
+      placeholder: 例如 github-readme-stats / https://…
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 确认
+      options:
+        - label: 该建议不需要扩大扩展权限，也不需要引入 npm 依赖或构建步骤
+          required: true

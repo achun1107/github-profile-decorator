@@ -1,0 +1,60 @@
+name: Validate Extension
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: manifest + JS syntax + assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate manifest.json
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          m = json.loads(pathlib.Path("manifest.json").read_text(encoding="utf-8"))
+          assert m.get("manifest_version") == 3, "manifest_version must be 3"
+          assert m.get("name") and m.get("version"), "name and version are required"
+          for host in m.get("host_permissions", []):
+              assert host.startswith("https://github.com/"), f"host_permissions out of scope: {host}"
+          for icon in m.get("icons", {}).values():
+              assert pathlib.Path(icon).is_file(), f"missing icon: {icon}"
+          for script in m.get("content_scripts", []):
+              for js in script.get("js", []):
+                  assert pathlib.Path(js).is_file(), f"missing content script: {js}"
+          popup = m.get("action", {}).get("default_popup")
+          assert popup and pathlib.Path(popup).is_file(), "missing popup"
+          sw = m.get("background", {}).get("service_worker")
+          assert sw and pathlib.Path(sw).is_file(), "missing service worker"
+          print("manifest.json ok:", m["name"], "v" + m["version"])
+          PY
+
+      - name: Check JavaScript syntax
+        run: |
+          for f in content.js popup.js background.js; do
+            node --check "$f"
+            echo "syntax ok: $f"
+          done
+
+      - name: Check README image references
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          text = pathlib.Path("README.md").read_text(encoding="utf-8")
+          missing = [
+              t for t in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", text)
+              if not t.startswith(("http://", "https://")) and not pathlib.Path(t).is_file()
+          ]
+          assert not missing, f"README references missing images: {missing}"
+          print("README image references ok")
+          PY

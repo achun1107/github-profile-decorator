@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="GitHub 个人主页装修助手：Chrome / Edge Manifest V3 浏览器扩展，访问任意 GitHub 主页自动注入统计卡片、贡献蛇、技术栈与社交徽章">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fcff"/>
+      <stop offset="1" stop-color="#e2f0fb"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0e75b6"/>
+      <stop offset="1" stop-color="#28a6dd"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1185" cy="60" r="205" fill="#d3e9f9" opacity="0.55"/>
+  <circle cx="60" cy="620" r="170" fill="#d9ecfa" opacity="0.5"/>
+  <rect x="0" y="0" width="1280" height="8" fill="url(#brand)"/>
+
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Microsoft YaHei,sans-serif">
+    <rect x="72" y="78" width="286" height="34" rx="17" fill="#0e75b6"/>
+    <text x="90" y="101" font-size="14" font-weight="700" fill="#ffffff" letter-spacing="0.6">CHROME · EDGE · MANIFEST V3</text>
+
+    <text x="72" y="205" font-size="58" font-weight="800" fill="#102a43">GitHub 个人主页</text>
+    <text x="72" y="278" font-size="58" font-weight="800" fill="url(#brand)">装修助手</text>
+    <text x="74" y="326" font-size="23" font-weight="600" fill="#0e75b6">GitHub Profile Decorator</text>
+
+    <text x="74" y="386" font-size="20" fill="#43586c">访问任意 GitHub 个人主页，自动在页面底部注入</text>
+    <text x="74" y="418" font-size="20" fill="#43586c">统计卡片 · 贡献蛇 · 技术栈 · 奖杯 · 社交徽章</text>
+
+    <g font-size="15" font-weight="600">
+      <rect x="72" y="462" width="132" height="40" rx="20" fill="#ffffff" stroke="#b9d9ee"/>
+      <text x="138" y="488" text-anchor="middle" fill="#0e75b6">12 个模块</text>
+      <rect x="216" y="462" width="132" height="40" rx="20" fill="#ffffff" stroke="#b9d9ee"/>
+      <text x="282" y="488" text-anchor="middle" fill="#0e75b6">零依赖</text>
+      <rect x="360" y="462" width="172" height="40" rx="20" fill="#ffffff" stroke="#b9d9ee"/>
+      <text x="446" y="488" text-anchor="middle" fill="#0e75b6">不收集数据</text>
+    </g>
+
+    <text x="72" y="580" font-size="16" fill="#6a7f91">github.com/achun1107/github-profile-decorator</text>
+  </g>
+
+  <!-- 右侧：浏览器窗口 + 注入的装饰区示意 -->
+  <g>
+    <rect x="694" y="116" width="516" height="392" rx="14" fill="#c9dcea" opacity="0.55"/>
+    <rect x="686" y="108" width="516" height="392" rx="14" fill="#ffffff" stroke="#cbd9e6" stroke-width="1.5"/>
+    <path d="M700 108 h488 a14 14 0 0 1 14 14 v30 h-516 v-30 a14 14 0 0 1 14 -14 z" fill="#f2f6fa"/>
+    <circle cx="712" cy="130" r="5" fill="#f0a3a3"/>
+    <circle cx="730" cy="130" r="5" fill="#f3d18a"/>
+    <circle cx="748" cy="130" r="5" fill="#9fd6a8"/>
+    <rect x="774" y="119" width="330" height="22" rx="11" fill="#ffffff" stroke="#dbe5ee"/>
+    <text x="788" y="134" font-family="Arial,sans-serif" font-size="12" fill="#8296a8">github.com/torvalds</text>
+
+    <!-- 主页原有内容示意 -->
+    <circle cx="726" cy="188" r="19" fill="#dbe8f2"/>
+    <rect x="756" y="174" width="150" height="11" rx="5" fill="#d3e0ec"/>
+    <rect x="756" y="193" width="96" height="8" rx="4" fill="#e3ecf4"/>
+    <rect x="706" y="222" width="476" height="1" fill="#e6edf3"/>
+
+    <!-- 注入的装饰区 -->
+    <rect x="706" y="234" width="476" height="248" rx="10" fill="#fbfdff" stroke="#9ecbe8" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="720" y="256" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#0e75b6">🎨 GitHub 装修助手</text>
+    <text x="1166" y="256" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8aa0b2">隐藏 ✕</text>
+    <text x="944" y="284" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#243b53">Hi, I'm torvalds!</text>
+    <rect x="836" y="296" width="216" height="14" rx="7" fill="#dceefb"/>
+
+    <rect x="722" y="322" width="220" height="66" rx="7" fill="#ffffff" stroke="#d7e5f0"/>
+    <rect x="734" y="334" width="76" height="8" rx="4" fill="#c8dceb"/>
+    <rect x="734" y="350" width="150" height="6" rx="3" fill="#e2edf5"/>
+    <rect x="734" y="362" width="120" height="6" rx="3" fill="#e2edf5"/>
+    <rect x="734" y="374" width="164" height="6" rx="3" fill="#e2edf5"/>
+
+    <rect x="954" y="322" width="212" height="66" rx="7" fill="#ffffff" stroke="#d7e5f0"/>
+    <rect x="966" y="334" width="88" height="8" rx="4" fill="#c8dceb"/>
+    <rect x="966" y="352" width="30" height="26" rx="4" fill="#d9ecfa"/>
+    <rect x="1004" y="352" width="30" height="26" rx="4" fill="#c4e3f6"/>
+    <rect x="1042" y="352" width="30" height="26" rx="4" fill="#a9d6f0"/>
+    <rect x="1080" y="352" width="30" height="26" rx="4" fill="#8ec8ea"/>
+
+    <rect x="722" y="398" width="142" height="34" rx="7" fill="#eaf5fd"/>
+    <rect x="876" y="398" width="142" height="34" rx="7" fill="#eaf5fd"/>
+    <rect x="1030" y="398" width="136" height="34" rx="7" fill="#eaf5fd"/>
+    <text x="793" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#3d7ba6">Streak</text>
+    <text x="947" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#3d7ba6">Tech Stack</text>
+    <text x="1098" y="420" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#3d7ba6">Trophy</text>
+
+    <path d="M722 452 q28 -16 56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0" fill="none" stroke="#7fc0e8" stroke-width="3" stroke-linecap="round"/>
+    <rect x="840" y="462" width="66" height="12" rx="6" fill="#d6e9f7"/>
+    <rect x="914" y="462" width="66" height="12" rx="6" fill="#d6e9f7"/>
+    <rect x="988" y="462" width="66" height="12" rx="6" fill="#d6e9f7"/>
+  </g>
+</svg>

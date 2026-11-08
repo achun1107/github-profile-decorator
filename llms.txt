@@ -1,0 +1,32 @@
+# GitHub 个人主页装修助手 / GitHub Profile Decorator
+
+> Chrome / Edge Manifest V3 浏览器扩展。访问任意 GitHub 个人主页时，在页面底部自动注入统计卡片、贡献蛇、技术栈图标、成就奖杯与社交徽章等装饰。零依赖、零构建、无后端、不向自有服务器上传数据。仓库：https://github.com/achun1107/github-profile-decorator
+
+## 首选文档
+
+- [README.md](https://github.com/achun1107/github-profile-decorator/blob/main/README.md)：定位、30 秒快速开始、安装、模块清单、配置、贡献蛇、FAQ 与故障排查
+- [AGENTS.md](https://github.com/achun1107/github-profile-decorator/blob/main/AGENTS.md)：AI 协作规范、硬性约束、验证命令、文档同步规则
+- [CHANGELOG.md](https://github.com/achun1107/github-profile-decorator/blob/main/CHANGELOG.md)：版本变更记录
+- [PRIVACY.md](https://github.com/achun1107/github-profile-decorator/blob/main/PRIVACY.md)：隐私政策（Chrome Web Store 上架必需）
+- [CONTRIBUTING.md](https://github.com/achun1107/github-profile-decorator/blob/main/CONTRIBUTING.md)：本地加载、自检清单、提交规范
+- [SECURITY.md](https://github.com/achun1107/github-profile-decorator/blob/main/SECURITY.md)：漏洞报告渠道与支持版本
+- [STORE_LISTING.md](https://github.com/achun1107/github-profile-decorator/blob/main/STORE_LISTING.md)：商店文案与待补素材清单
+
+## 官网
+
+- [产品介绍页](https://achun1107.github.io/github-profile-decorator/)：定位、效果示意、安装入口
+- [官网 llms.txt](https://achun1107.github.io/github-profile-decorator/llms.txt)
+- [官网 robots.txt](https://achun1107.github.io/github-profile-decorator/robots.txt)：显式放行主流 AI 爬虫
+
+## 关键源码
+
+- [manifest.json](https://github.com/achun1107/github-profile-decorator/blob/main/manifest.json)：MV3 权限与入口声明
+- [content.js](https://github.com/achun1107/github-profile-decorator/blob/main/content.js)：**核心**，注入逻辑、Turbo SPA 适配、装饰区构造
+- [popup.html](https://github.com/achun1107/github-profile-decorator/blob/main/popup.html) / [popup.js](https://github.com/achun1107/github-profile-decorator/blob/main/popup.js)：配置弹窗，读写 `chrome.storage.sync`
+- [background.js](https://github.com/achun1107/github-profile-decorator/blob/main/background.js)：service worker
+- [.github/workflows/validate.yml](https://github.com/achun1107/github-profile-decorator/blob/main/.github/workflows/validate.yml)：CI 校验（manifest、JS 语法、资源）
+- [docs/index.html](https://github.com/achun1107/github-profile-decorator/blob/main/docs/index.html)：官网单页源码
+
+## 可跳过
+
+`icons/*.png`、`assets/*.svg` 等图标与品牌示意图为二进制 / 视觉素材，不含可供推理的逻辑；`.github/ISSUE_TEMPLATE/` 为表单模板。

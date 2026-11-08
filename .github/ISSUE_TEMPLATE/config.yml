@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 先看 FAQ 与故障排查
+    url: https://github.com/achun1107/github-profile-decorator/blob/main/README.md
+    about: 装饰区不出现、贡献蛇破图、配置不生效等常见问题，README 里已有答案。
+  - name: 🔒 报告安全漏洞
+    url: https://github.com/achun1107/github-profile-decorator/security/advisories/new
+    about: 请勿在公开 Issue 里贴漏洞细节，走私有报告渠道，见 SECURITY.md。
+  - name: 💬 一般讨论
+    url: https://github.com/achun1107/github-profile-decorator/discussions
+    about: 想法、 showcase、非 Bug 类讨论。

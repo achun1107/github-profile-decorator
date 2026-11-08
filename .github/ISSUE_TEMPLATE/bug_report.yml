@@ -1,0 +1,78 @@
+name: 🐛 Bug 报告
+description: 装饰区没出现、模块异常、配置不生效等
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先查 [README 的 FAQ 与故障排查](https://github.com/achun1107/github-profile-decorator/blob/main/README.md)；若涉及第三方徽章服务本身挂了，请先确认该服务是否可访问。
+        **不要在此粘贴任何 token、密钥或账号凭据。**
+
+  - type: input
+    id: version
+    attributes:
+      label: 扩展版本
+      description: 在 `chrome://extensions` 卡片上查看
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: 浏览器
+      options:
+        - Chrome
+        - Edge
+        - 其他 Chromium 内核浏览器
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: Windows 11 / macOS 15 / Ubuntu 24.04
+    validations:
+      required: true
+
+  - type: input
+    id: profile_url
+    attributes:
+      label: 出问题的 GitHub 主页 URL
+      placeholder: https://github.com/torvalds
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: "1. … 2. … 3. …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果 / 实际结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: console
+    attributes:
+      label: 控制台报错（如有）
+      description: F12 → Console，贴出相关报错
+      render: shell
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 自检
+      options:
+        - label: 已在扩展页点「重新加载」并刷新 GitHub 页面
+          required: true
+        - label: 已排除第三方徽章服务自身不可用
+          required: true
