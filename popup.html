@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub 装修助手</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; width: 340px; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 13px; color: #1f2328; background: #f6f8fa; }
+    .hd { padding: 12px 14px; background: #0e75b6; color: #fff; display: flex; align-items: center; gap: 8px; }
+    .hd b { font-size: 14px; }
+    .bd { padding: 12px 14px; max-height: 460px; overflow: auto; }
+    .row { margin-bottom: 12px; }
+    label.lb { display: block; font-weight: 600; margin-bottom: 5px; color: #374151; }
+    input[type=text], textarea, select { width: 100%; padding: 7px 9px; border: 1px solid #d0d7de;
+      border-radius: 7px; font: inherit; background: #fff; }
+    textarea { resize: vertical; }
+    .tg { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .tg label { display: flex; align-items: center; gap: 6px; padding: 6px 8px; border: 1px solid #d0d7de;
+      border-radius: 7px; background: #fff; cursor: pointer; }
+    .tg input { accent-color: #0e75b6; }
+    .enable { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; font-weight: 600; }
+    .ft { padding: 10px 14px; border-top: 1px solid #d0d7de; display: flex; align-items: center;
+      justify-content: space-between; background: #fff; }
+    .status { color: #1a7f37; font-size: 12px; }
+    a { color: #0e75b6; text-decoration: none; }
+    .hint { color: #656d76; font-size: 11px; margin-top: 3px; }
+  </style>
+</head>
+<body>
+  <div class="hd"><span>🎨</span><b>GitHub 装修助手</b></div>
+  <div class="bd">
+    <div class="enable"><input type="checkbox" id="enabled" /> <label for="enabled">启用注入（访问主页时自动装修）</label></div>
+
+    <div class="row">
+      <label class="lb">装修模块</label>
+      <div class="tg" id="modules">
+        <label><input type="checkbox" data-m="title" />标题</label>
+        <label><input type="checkbox" data-m="typing" />打字动画</label>
+        <label><input type="checkbox" data-m="visitor" />访客徽章</label>
+        <label><input type="checkbox" data-m="stats" />统计卡片</label>
+        <label><input type="checkbox" data-m="streak" />连续打卡</label>
+        <label><input type="checkbox" data-m="tech" />技术栈</label>
+        <label><input type="checkbox" data-m="snake" />贡献蛇</label>
+        <label><input type="checkbox" data-m="social" />社交徽章</label>
+        <label><input type="checkbox" data-m="quote" />页脚语录</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="lb">统计卡片主题</label>
+      <select id="theme">
+        <option value="radical">radical</option>
+        <option value="tokyonight">tokyonight</option>
+        <option value="vue">vue</option>
+        <option value="nightowl">nightowl</option>
+        <option value="buefy">buefy</option>
+        <option value="gruvbox">gruvbox</option>
+        <option value="dracula">dracula</option>
+        <option value="merko">merko</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label class="lb">技术栈图标（逗号分隔）</label>
+      <input type="text" id="techIcons" />
+    </div>
+
+    <div class="row">
+      <label class="lb">打字动画文案（每行一条）</label>
+      <textarea id="typingLines" rows="3"></textarea>
+    </div>
+
+    <div class="row">
+      <label class="lb">页脚语录</label>
+      <input type="text" id="quote" />
+    </div>
+
+    <div class="row">
+      <label class="lb">社交链接</label>
+      <input type="text" id="email" placeholder="邮箱" />
+      <div style="height:6px"></div>
+      <input type="text" id="website" placeholder="个人网站域名" />
+      <div style="height:6px"></div>
+      <input type="text" id="twitter" placeholder="Twitter 用户名" />
+      <div class="hint">GitHub 徽章自动用当前访问的用户名，无需填写。</div>
+    </div>
+  </div>
+  <div class="ft">
+    <span class="status" id="status"></span>
+    <a href="https://github.com/achun1107/github-profile-decorator" target="_blank" rel="noopener">仓库 ★</a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

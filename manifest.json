@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub 个人主页装修助手",
+  "version": "1.0.0",
+  "description": "访问任意 GitHub 个人主页时，自动注入统计卡片、贡献蛇、技术栈、社交徽章等装饰，实时把主页装修得更漂亮。",
+  "permissions": ["storage"],
+  "host_permissions": ["https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "GitHub 装修助手"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
