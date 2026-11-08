@@ -9,12 +9,13 @@
     modules: {
       title: true, typing: true, visitor: true, stats: true,
       streak: true, tech: true, snake: true, social: true, quote: true,
+      trophy: true, activity: true, wakatime: true,
     },
     theme: "radical",
     techIcons: "js,ts,react,node,git,github,html,css,python",
     typingLines: ["Hi, I am a developer 👋", "Love Open Source 🚀", "Building cool things"],
     quote: "Code is poetry.",
-    social: { email: "", website: "", twitter: "" },
+    social: { email: "", website: "", twitter: "", wakatime: "" },
   };
 
   let cfg = JSON.parse(JSON.stringify(DEFAULTS));
@@ -93,6 +94,16 @@
         <img alt="stats" src="https://github-readme-stats.vercel.app/api?username=${u}&show_icons=true&theme=${t}&hide_border=true&count_private=true">
         <img alt="langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=${u}&layout=compact&theme=${t}&hide_border=true">
       </div>`;
+    }
+    if (m.trophy) {
+      html += `<div class="ghd-sec"><h3>🏆 Trophy</h3><div class="ghd-center"><img alt="trophy" src="https://github-profile-trophy.vercel.app/?username=${u}&column=3&margin-w=15&margin-h=15&theme=${t}"></div></div>`;
+    }
+    if (m.activity) {
+      html += `<div class="ghd-sec"><h3>📈 Activity Graph</h3><div class="ghd-center"><img alt="activity" src="https://github-readme-activity-graph.vercel.app/graph?username=${u}&theme=${t}&hide_border=true&radius=16"></div></div>`;
+    }
+    if (m.wakatime) {
+      const w = cfg.social.wakatime;
+      if (w) html += `<div class="ghd-sec"><h3>⏱️ WakaTime</h3><div class="ghd-center"><img alt="wakatime" src="https://github-readme-stats.vercel.app/api/wakatime?username=${w}&theme=${t}&hide_border=true&layout=compact"></div></div>`;
     }
     if (m.streak) {
       html += `<div class="ghd-sec"><h3>🔥 Streak</h3><div class="ghd-center"><img alt="streak" src="https://streak-stats.demolab.com?user=${u}&theme=${t}&hide_border=true"></div></div>`;

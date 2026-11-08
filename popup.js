@@ -4,12 +4,13 @@ const DEFAULTS = {
   modules: {
     title: true, typing: true, visitor: true, stats: true,
     streak: true, tech: true, snake: true, social: true, quote: true,
+    trophy: true, activity: true, wakatime: true,
   },
   theme: "radical",
   techIcons: "js,ts,react,node,git,github,html,css,python",
   typingLines: ["Hi, I am a developer 👋", "Love Open Source 🚀", "Building cool things"],
   quote: "Code is poetry.",
-  social: { email: "", website: "", twitter: "" },
+  social: { email: "", website: "", twitter: "", wakatime: "" },
 };
 
 const $ = (id) => document.getElementById(id);
@@ -31,6 +32,7 @@ function load() {
     $("email").value = (cfg.social && cfg.social.email) || "";
     $("website").value = (cfg.social && cfg.social.website) || "";
     $("twitter").value = (cfg.social && cfg.social.twitter) || "";
+    $("wakatime").value = (cfg.social && cfg.social.wakatime) || "";
   });
 }
 
@@ -50,6 +52,7 @@ function collect() {
       email: $("email").value.trim(),
       website: $("website").value.trim(),
       twitter: $("twitter").value.trim(),
+      wakatime: $("wakatime").value.trim(),
     },
   };
 }

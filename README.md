@@ -14,6 +14,9 @@
 | 统计卡片 | github-readme-stats（含语言分布） |
 | 连续打卡 | streak-stats |
 | 技术栈 | skill-icons 一键拼装 |
+| 🏆 奖杯 | github-profile-trophy 成就奖杯 |
+| 📈 活跃图 | github-readme-activity-graph 贡献活跃度 |
+| ⏱️ WakaTime | 编码时长统计（需填 WakaTime 用户名） |
 | 贡献蛇 | Platane/snk（需用户自己仓库配置 Action） |
 | 社交徽章 | GitHub / 邮箱 / 网站 / Twitter |
 | 页脚语录 | 自定义名言 |
